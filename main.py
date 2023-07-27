@@ -19,7 +19,7 @@ def merge_tokens(tokens):
     return merged_tokens
 
 def NER(input):
-    output = bert_NER(input)
+    output = merge_tokens(bert_NER(input))
     return {"text":input, "entities":output}
 
 
